@@ -18,9 +18,9 @@ public class FindID extends JFrame {
 
     public FindID(){
         setContentPane(main);
-        setSize(850, 1000);
+        setSize(700, 300);
         setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
-        setBounds(0,0,850,1000);
+        setBounds(0,0,700,300);
         setTitle("Find ID");
         setVisible(true);
 

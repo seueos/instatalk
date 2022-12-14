@@ -16,15 +16,17 @@ public class Signup extends JFrame{
     private JTextField nickname;
     private JButton btnOk;
     private JLabel lblOk;
+    private JButton back;
+
 
     private boolean isIdPossible = false;
     private boolean isSuccess = false;
 
     public Signup(){
         setContentPane(panel1);
-        setSize(850, 1000);
+        setSize(900, 700);
         setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
-        setBounds(0,0,850,1000);
+        setBounds(0,0,900,700);
         loginregister registermanager= new loginregister();
         setTitle("signup");
         setVisible(true);
@@ -227,7 +229,16 @@ public class Signup extends JFrame{
                 else {
                     lblOk.setForeground(Color.RED);
                     lblOk.setText("Impossible");
+
                 }
+            }
+        });
+        back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Login b = new Login();
+                setVisible(false);
+                b.setVisible(true);
             }
         });
     }
